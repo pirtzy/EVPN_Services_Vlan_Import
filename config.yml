@@ -1,0 +1,28 @@
+path: []
+inputs:
+  tenants:
+    - macVrfVniBase: 10000
+      name: MtTenant
+      vlanAwareBundles: []
+      vlans:
+        - arp: {}
+          dhcpServerDetails: []
+          eTreeDetails: {}
+          eTreeRootSwitches: []
+          eosCli: []
+          l3OrL2: true
+          mtu: 9214
+          name: testvl2
+          nodes: []
+          overrideVariables: {}
+          sviIpAddresses: {}
+          switches:
+            - inputs:
+                switch:
+                  hostname: []
+              tags:
+                query: Leaf-Domain:*
+          vlanId: 2
+          vrf: null
+          vxlan: true
+      vrfs: []
