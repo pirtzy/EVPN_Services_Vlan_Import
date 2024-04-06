@@ -1,8 +1,9 @@
-# Created By Shai Perretz
-# 5.4.2024
+# Created By 
+# Shai Perretz 5.4.2024
+#
 # Input:  vlanlist.csv - CSV format with two columns: vlanId, name
 # Output: vlanlist.yaml - yaml format to use as import for the EVPN_Services studios on CloudVision
- 
+# Output yaml file formatted without indentation (using braces)
 
 import yaml
 import csv
@@ -10,7 +11,6 @@ import csv
 VLAN_LIST_CSV = 'vlanlist.csv'
 OUTPUT_VLAN_LIST_YAML = 'vlanlist.yaml'
 CONFIG_EXAMPLE_YANL = 'config.yml'
-
 
 
 def printVlans(tenant):
@@ -54,8 +54,4 @@ if __name__ == '__main__':
     text_file = open(OUTPUT_VLAN_LIST_YAML, "w")
     text_file.write(str(output))
     text_file.close()
-
-
-    #s = yaml.dump_all([output])
-    #print(output)
  
